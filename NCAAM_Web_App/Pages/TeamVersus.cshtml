@@ -1,0 +1,21 @@
+﻿@page
+@model VersusModel
+@{
+    ViewData["Title"] = "Team 1:1 Game Simulation";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this tool to simulate a game between two teams.</p>
+
+<form>
+    <p>
+        <select asp-for="TeamOne" asp-items="Model.Teams">
+        </select>
+        <select asp-for="TeamTwo" asp-items="Model.Teams">Away Team
+        </select>
+        <!--Title: <input type="button" asp-for="SearchString" /> -->
+        <input type="submit" value="Submit" />
+        <th>@Html.DisplayFor(modelItem => Model.Score)</th>
+    </p>
+
+</form>

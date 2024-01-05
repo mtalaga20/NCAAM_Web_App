@@ -1,0 +1,57 @@
+﻿@page
+@model NCAAM_Web_App.Pages.RankingsModel
+@{
+    ViewData["Title"] = "NCAA Rankings";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>This page shows the rankings.</p>
+
+<form>
+    <p>
+        <select asp-for="Conference" asp-items="Model.Conferences">
+            <option value="">All</option>
+        </select>
+         Team Name: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ranks[0].Ranking)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ranks[0].TeamName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ranks[0].Conference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ranks[0].Score)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Ranks.OrderBy(f => f.Ranking))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ranking)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeamName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Conference)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Score)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

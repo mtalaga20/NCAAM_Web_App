@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCAAM_Web_App", "NCAAM_Web_App\NCAAM_Web_App.csproj", "{5B290BCC-FC88-40B0-84DC-DF6753CE008B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B290BCC-FC88-40B0-84DC-DF6753CE008B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B290BCC-FC88-40B0-84DC-DF6753CE008B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B290BCC-FC88-40B0-84DC-DF6753CE008B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B290BCC-FC88-40B0-84DC-DF6753CE008B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8269AE04-A316-446D-AB8B-CD5CE26ACA23}
+	EndGlobalSection
+EndGlobal
