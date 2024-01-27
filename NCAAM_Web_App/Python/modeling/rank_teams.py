@@ -133,7 +133,7 @@ def rank_teams(prediction_year:str) -> None:
                      teams[i]["AP"], teams[i]["OSRS"], teams[i]["DSRS"]])
 
     df = pd.DataFrame(rows, columns=['Ranking', 'TeamName', 'Score', 'Conference', 'W', 'L', 'SRS', 'APRank', 'OSRS', 'DSRS'])
-    df.to_csv(f'evaluation/{prediction_year}_rankings.csv', index=False)
+    df.to_csv(f'Python/evaluation/{prediction_year}_rankings.csv', index=False)
 
     #Add to database
     engine = create_engine('mssql+pyodbc://.\SQLEXPRESS/NCAAM_Stats?trusted_connection=yes&driver=SQL+Server', use_setinputsizes=False)

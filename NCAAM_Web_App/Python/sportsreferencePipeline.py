@@ -11,11 +11,11 @@ from modeling import rank_teams
 ###----------------------------------------------------------------------------
 #years = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024]
 #years = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023]
-years = [2024]
+years = [2009]
 preprocess = True
-tourney = False #Whether the years all have tournament games (i.e. tourney_games.csv)
+tourney = True #False #Whether the years all have tournament games (i.e. tourney_games.csv)
 #Flags to rank teams - both need to be on for latest year only
-rank_tms = True
+rank_tms = False #True
 rank_teams_latest_year_only = True
 ###----------------------------------------------------------------------------
 
