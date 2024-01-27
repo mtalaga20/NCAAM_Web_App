@@ -23,11 +23,17 @@ namespace NCAAM_Web_App.Migrations
 
             modelBuilder.Entity("NCAAM_Web_App.Models.Rank", b =>
                 {
-                    b.Property<int>("Ranking")
+                    b.Property<long>("Ranking")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Ranking"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Ranking"));
+
+                    b.Property<string>("Conference")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("Score")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("TeamName")
                         .HasColumnType("nvarchar(max)");
@@ -35,6 +41,28 @@ namespace NCAAM_Web_App.Migrations
                     b.HasKey("Ranking");
 
                     b.ToTable("Rank");
+                });
+
+            modelBuilder.Entity("NCAAM_Web_App.Models.Tournament", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Game")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GameNum")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Result")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tournament");
                 });
 #pragma warning restore 612, 618
         }

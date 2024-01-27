@@ -1,0 +1,45 @@
+﻿@*@page
+@model NCAAM_Web_App.Pages.OutlookModel
+@{
+    ViewData["Title"] = "NCAA Rankings";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>This page shows the predicted outcomes given a year.</p>
+
+<form>
+    <p>
+        <select asp-for="Year" asp-items="Model.Year">
+            <option value="">All</option>
+        </select>
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Outlooks[0].Game)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Outlooks[0].Result)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Outlooks.OrderBy(f => f.Ranking))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Result)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+*@

@@ -1,0 +1,64 @@
+Id,Year,Game,GameNum,Result
+2024.W1,2024,W1,1,Game W1 - Purdue beats Eastern Kentucky by 9.931050479335255
+2024.W2,2024,W2,2,Game W2 - Gonzaga beats Mississippi by 0.4892861722901389
+2024.W3,2024,W3,3,Game W3 - Oklahoma beats McNeese State by 5.671024905195774
+2024.W4,2024,W4,4,Game W4 - Marquette beats Samford by 6.5893672343415055
+2024.W5,2024,W5,5,Game W5 - Florida Atlantic beats Princeton by 7.85151681731154
+2024.W6,2024,W6,6,Game W6 - Duke beats Vermont by 10.136783380624065
+2024.W7,2024,W7,7,Game W7 - Ohio State beats Nevada by 2.248606906410482
+2024.W8,2024,W8,8,Game W8 - Tennessee beats Troy by 11.249843302909488
+2024.E1,2024,E1,9,Game E1 - Arizona beats South Dakota State by 6.66135752457393
+2024.E2,2024,E2,10,Game E2 - St. John's (NY) beats Nebraska by 6.174697652921377
+2024.E3,2024,E3,11,Game E3 - Memphis beats Drake by 6.95273934705621
+2024.E4,2024,E4,12,Game E4 - San Diego State beats High Point by 12.726308041460252
+2024.E5,2024,E5,13,Game E5 - Colorado State beats Grand Canyon by 13.02249496548904
+2024.E6,2024,E6,14,Game E6 - Auburn beats Oakland by 10.076447620528677
+2024.E7,2024,E7,15,Game E7 - Villanova beats Northwestern by 8.063187568759817
+2024.E8,2024,E8,16,Game E8 - Kansas beats Eastern Washington by 17.348838449694718
+2024.S1,2024,S1,17,Game S1 - Houston beats Merrimack by 11.032012210205622
+2024.S2,2024,S2,18,Game S2 - Utah beats Mississippi State by 5.592062428087108
+2024.S3,2024,S3,19,Game S3 - Clemson beats Oregon by 4.736687319018599
+2024.S4,2024,S4,20,Game S4 - Creighton beats Akron by 10.216642050189376
+2024.S5,2024,S5,21,Game S5 - Dayton beats Colorado by 2.5115204013836268
+2024.S6,2024,S6,22,Game S6 - Kentucky beats Drexel by 14.427042274321474
+2024.S7,2024,S7,23,Game S7 - Texas Tech beats Utah State by 1.9683454956408173
+2024.S8,2024,S8,24,Game S8 - Wisconsin beats Jacksonville State by 7.771455284455532
+2024.MW1,2024,MW1,25,Game MW1 - Connecticut beats Southern by 15.173829020495893
+2024.MW2,2024,MW2,26,Game MW2 - Michigan State beats Texas A&M by 11.731490232667458
+2024.MW3,2024,MW3,27,Game MW3 - Brigham Young beats Saint Mary's (CA) by 5.140815690821277
+2024.MW4,2024,MW4,28,Game MW4 - Baylor beats UC Irvine by 18.022007645772792
+2024.MW5,2024,MW5,29,Game MW5 - Alabama beats Cincinnati by 9.544225881683275
+2024.MW6,2024,MW6,30,Game MW6 - Illinois beats Morehead State by 6.053718030506004
+2024.MW7,2024,MW7,31,Game MW7 - Iowa State beats Providence by 12.549011994653153
+2024.MW8,2024,MW8,32,Game MW8 - North Carolina beats Saint Peter's by 3.075396084710794
+2024.W9,2024,W9,33,Game W9 - Purdue beats Gonzaga by 7.567404357705213
+2024.W10,2024,W10,34,Game W10 - Oklahoma beats Marquette by 1.372732133333004
+2024.W11,2024,W11,35,Game W11 - Duke beats Florida Atlantic by 0.46948726911286576
+2024.W12,2024,W12,36,Game W12 - Tennessee beats Ohio State by 5.137411045104381
+2024.E9,2024,E9,37,Game E9 - Arizona beats St. John's (NY) by 8.719384788299376
+2024.E10,2024,E10,38,Game E10 - San Diego State beats Memphis by 4.761016737323703
+2024.E11,2024,E11,39,Game E11 - Auburn beats Colorado State by 0.3672630813725854
+2024.E12,2024,E12,40,Game E12 - Kansas beats Villanova by 0.9542745655832318
+2024.S9,2024,S9,41,Game S9 - Houston beats Utah by 26.601858246370533
+2024.S10,2024,S10,42,Game S10 - Creighton beats Clemson by 8.145788420406726
+2024.S11,2024,S11,43,Game S11 - Kentucky beats Dayton by 1.3430434362335728
+2024.S12,2024,S12,44,Game S12 - Wisconsin beats Texas Tech by 3.6742755154692284
+2024.MW9,2024,MW9,45,Game MW9 - Connecticut beats Michigan State by 0.5792888157083684
+2024.MW10,2024,MW10,46,Game MW10 - Brigham Young beats Baylor by 5.938318748316
+2024.MW11,2024,MW11,47,Game MW11 - Alabama beats Illinois by 10.766158295603443
+2024.MW12,2024,MW12,48,Game MW12 - Iowa State beats North Carolina by 5.745290414285922
+2024.W13,2024,W13,49,Game W13 - Purdue beats Oklahoma by 16.28071577696836
+2024.W14,2024,W14,50,Game W14 - Tennessee beats Duke by 2.883056246230178
+2024.E13,2024,E13,51,Game E13 - Arizona beats San Diego State by 5.049745269760241
+2024.E14,2024,E14,52,Game E14 - Auburn beats Kansas by 7.846114398663347
+2024.S13,2024,S13,53,Game S13 - Houston beats Creighton by 19.809762870820975
+2024.S14,2024,S14,54,Game S14 - Wisconsin beats Kentucky by 0.1971653220369184
+2024.MW13,2024,MW13,55,Game MW13 - Brigham Young beats Connecticut by 5.353274991181568
+2024.MW14,2024,MW14,56,Game MW14 - Iowa State beats Alabama by 9.794367954572682
+2024.W15,2024,W15,57,Game W15 - Purdue beats Tennessee by 20.934910380537893
+2024.E15,2024,E15,58,Game E15 - Arizona beats Auburn by 12.355471184978292
+2024.S15,2024,S15,59,Game S15 - Houston beats Wisconsin by 15.920950662002745
+2024.MW15,2024,MW15,60,Game MW15 - Iowa State beats Brigham Young by 6.957443970089979
+2024.F1,2024,F1,61,Game F1 - Purdue beats Arizona by 7.185653802883241
+2024.F2,2024,F2,62,Game F2 - Houston beats Iowa State by 18.97509270684674
+2024.Final,2024,Final,63,Game Final - Houston beats Purdue by 13.027116670461158

@@ -38,7 +38,7 @@ namespace NCAAM_Web_App.Pages
             {
                 Process process = new Process();
                 process.StartInfo.FileName = "C:\\Program Files\\Python311\\python.exe";
-                process.StartInfo.Arguments = $"C:\\Users\\mktal\\repos\\College_Basketball_Game_Prediction\\modeling\\team_versus.py \"{TeamOne}\" \"{TeamTwo}\""; // Note the /c command (*)
+                process.StartInfo.Arguments = $"Python\\modeling\\team_versus.py \"{TeamOne}\" \"{TeamTwo}\""; // Note the /c command (*)
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.RedirectStandardOutput = true;
                 process.StartInfo.RedirectStandardError = true;

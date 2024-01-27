@@ -28,7 +28,7 @@ namespace NCAAM_Web_App.Pages
         [BindProperty(SupportsGet = true)]
         public string? Conference { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string sortOrder)
         {
             IQueryable<string> conferenceQuery = from m in _context.Rank
                                             orderby m.Conference
@@ -43,6 +43,31 @@ namespace NCAAM_Web_App.Pages
             if (!string.IsNullOrEmpty(Conference))
             {
                 teams = teams.Where(x => x.Conference == Conference);
+            }
+
+            switch (sortOrder)
+            {
+                case "srs":
+                    teams = teams.OrderByDescending(s => s.SRS);
+                    break;
+                case "dsrs":
+                    teams = teams.OrderByDescending(s => s.DSRS);
+                    break;
+                case "osrs":
+                    teams = teams.OrderByDescending(s => s.OSRS);
+                    break;
+                case "ap":
+                    teams = teams.Where(x=>x.APRank!=0).OrderBy(s => s.APRank);
+                    break;
+                case "w":
+                    teams = teams.OrderByDescending(s => s.W);
+                    break;
+                case "l":
+                    teams = teams.OrderBy(s => s.W);
+                    break;
+                default:
+                    teams = teams.OrderBy(s => s.Ranking);
+                    break;
             }
 
             Conferences = new SelectList(await conferenceQuery.Distinct().ToListAsync());

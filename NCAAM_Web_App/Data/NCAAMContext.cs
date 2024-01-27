@@ -15,5 +15,6 @@ namespace NCAAM_Web_App.Data
         }
 
         public DbSet<NCAAM_Web_App.Models.Rank> Rank { get; set; } = default!;
+        public DbSet<NCAAM_Web_App.Models.Tournament> Tournament { get; set; } = default!;
     }
 }

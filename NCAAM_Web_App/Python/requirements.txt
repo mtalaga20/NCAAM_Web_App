@@ -1,0 +1,7 @@
+pandas
+sqlalchemy
+pyodbc
+numpy
+sklearn
+bs4
+html5lib

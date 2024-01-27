@@ -21,7 +21,9 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Ranks[0].Ranking)
+                <a asp-page="./Rankings" asp-route-sortOrder="">
+                    @Html.DisplayNameFor(model => model.Ranks[0].Ranking)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Ranks[0].TeamName)
@@ -30,13 +32,43 @@
                 @Html.DisplayNameFor(model => model.Ranks[0].Conference)
             </th>
             <th>
+                <a asp-page="./Rankings" asp-route-sortOrder="w">
+                    @Html.DisplayNameFor(model => model.Ranks[0].W)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Rankings" asp-route-sortOrder="l">
+                @Html.DisplayNameFor(model => model.Ranks[0].L)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Rankings" asp-route-sortOrder="ap">
+                @Html.DisplayNameFor(model => model.Ranks[0].APRank)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Rankings" asp-route-sortOrder="srs">
+                @Html.DisplayNameFor(model => model.Ranks[0].SRS)
+             </a>
+            </th>
+            <th>
+                <a asp-page="./Rankings" asp-route-sortOrder="osrs">
+                @Html.DisplayNameFor(model => model.Ranks[0].OSRS)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Rankings" asp-route-sortOrder="dsrs">
+                @Html.DisplayNameFor(model => model.Ranks[0].DSRS)
+                </a>
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Ranks[0].Score)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Ranks.OrderBy(f => f.Ranking))
+        @foreach (var item in Model.Ranks)
         {
             <tr>
                 <td>
@@ -47,6 +79,24 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Conference)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.W)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.APRank)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SRS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OSRS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DSRS)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Score)

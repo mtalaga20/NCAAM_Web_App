@@ -1,0 +1,50 @@
+﻿@page
+@model NCAAM_Web_App.Pages.TournamentModel
+@{
+    ViewData["Title"] = "NCAA Tournament";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>This page shows the predicted outcomes given a year.</p>
+
+<form>
+    <p>
+        <select asp-for="Year" asp-items="Model.Years">
+            <option value="">All</option>
+        </select>
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tournaments[0].Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tournaments[0].Game)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tournaments[0].Result)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Tournaments.OrderBy(f => f.GameNum))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Result)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
