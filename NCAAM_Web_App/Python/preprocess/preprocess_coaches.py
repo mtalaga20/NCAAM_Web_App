@@ -6,8 +6,8 @@ import numpy as np
 
 # -- PART B-2 -- #
 
-def preprocess_coaches(year:str):
-    csv_path = r'Python\\CSV_Data\\'
+def preprocess_coaches(year:str, root:str):
+    csv_path = root + r'Python\\CSV_Data\\'
 
     coach_team_map = pd.read_csv(csv_path+"coach_team_map.csv")
     coach_team_map = pd.Series(

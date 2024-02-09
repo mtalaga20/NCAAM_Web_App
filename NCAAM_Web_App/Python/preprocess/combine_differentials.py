@@ -6,12 +6,12 @@ Part C
 import pandas as pd
 import numpy as np
 
-def combine_differentials(year:str):
+def combine_differentials(year:str, root:str):
     # -- PART C -- #
     COACH_COLUMNS = 10 #Fixed int
     RATING_COLUMNS = 3
 
-    csv_path = r'Python\\CSV_Data\\'
+    csv_path = root + r'Python\\CSV_Data\\'
     #for year in [2015,2016,2017,2018,2019,2021,2022,2023]:
     games = pd.read_csv(csv_path + f'{year}\\tourney_games.csv').to_numpy()
     basic_dif = pd.read_csv(csv_path + f'{year}\\basic_differential.csv')

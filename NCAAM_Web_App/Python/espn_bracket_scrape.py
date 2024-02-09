@@ -17,6 +17,7 @@ locations = ["BROOKLYN", "PITTSBURGH", "CHARLOTTE", "SALT LAKE", "OMAHA",
              "SPOKANE", "CHARLOTTE", "MEMPHIS", "INDIANAPOLIS"]
 ###----------------------------------------------------------------------------
 
+root = 'NCAAM_Web_App\\Python\\'
 url = r"https://www.espn.com/espn/feature/story/_/page/bracketology/ncaa-bracketology-2024-march-madness-men-field-predictions"
 r = requests.get(url,headers ={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'})
 soup = bs(r.content, 'lxml')
@@ -56,14 +57,14 @@ lranks = lranks[8:]
 #df = pd.read_html(url, header=1)[0]
 
 #Preprocess team names
-team_map = pd.read_csv("CSV_Data/coach_team_map.csv")  
+team_map = pd.read_csv(root + "CSV_Data/coach_team_map.csv")  
 team_map = pd.Series(
         team_map['Mapped_Name'].values,
         index=team_map['Team_Name']
     ).to_dict()    
 
 #Make play-ins play each other
-with open(f'modeling/best-model{python_version()}.pkl', 'rb') as f:
+with open(root + f'modeling/best-model{python_version()}.pkl', 'rb') as f:
     model = pickle.load(f)
 
 winners = []
@@ -75,7 +76,7 @@ for i in range(0,len(playins),2):
     t1 = team_map[team_one] if team_one in team_map else team_one
     t2 = team_map[team_two] if team_two in team_map else team_two
    
-    winner = team_versus_fcn.team_versus(t1, t2, year, model)
+    winner = team_versus_fcn.team_versus(t1, t2, year, model, root)
     winners.append(team_one if winner==t1 else team_two)
 
 for winner in winners:
@@ -110,5 +111,5 @@ games = pd.DataFrame(lteams, columns=["Team","Game"])
 
 #Preprocess   
 games = games.replace({"Team":team_map})
-games.to_csv(f'CSV_Data/{year}/new_tourney.csv', index=False)
+games.to_csv(root + f'CSV_Data/{year}/new_tourney.csv', index=False)
 #DF

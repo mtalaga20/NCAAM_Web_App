@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")
 #----------------------------------------------
 prediction_year = None #year or None
 #----------------------------------------------
-
+root = 'NCAAM_Web_App\\'
 csv_path = r'Python\\CSV_Data\\'
 beginning_year = 2010
 years = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023]
@@ -24,10 +24,10 @@ model_functions = [gradient_boost_regressor.gb_regressor
                    ] #Models all have the same parameters
 
 #Train
-df = pd.read_csv(csv_path+f'{beginning_year}\\{beginning_year}_data.csv')
+df = pd.read_csv(root + csv_path+f'{beginning_year}\\{beginning_year}_data.csv')
 df = df.iloc[:,2:]
 for year in years:
-    small_df = pd.read_csv(csv_path+f'{year}\\{year}_data.csv')
+    small_df = pd.read_csv(root + csv_path+f'{year}\\{year}_data.csv')
     small_df = small_df.iloc[:,2:]
     df = pd.concat([df,small_df])
 
@@ -46,6 +46,6 @@ for model in model_functions:
 voter_model = VotingRegressor(estimators=models)
 voter_model.fit(X, y)
 
-with open(f'Python/modeling/best-model{python_version()}.pkl','wb') as f:
+with open(root + f'Python/modeling/best-model{python_version()}.pkl','wb') as f:
     pickle.dump(voter_model,f)
     print("Model saved.")

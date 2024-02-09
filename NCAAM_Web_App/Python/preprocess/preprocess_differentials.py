@@ -14,8 +14,8 @@ import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
 
-def preprocess_differentials(year:str):
-    csv_path = r'Python\\CSV_Data\\'
+def preprocess_differentials(year:str, root:str):
+    csv_path = root + r'Python\\CSV_Data\\'
 
     #Conference Pre-process
     teams = pd.read_csv(csv_path+'teams.csv')

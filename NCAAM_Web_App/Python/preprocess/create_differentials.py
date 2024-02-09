@@ -9,9 +9,9 @@ Part A - Before combining differentials
 import pandas as pd
 import numpy as np
 
-def create_differentials(year:str):
+def create_differentials(year:str, root:str):
 # -- PART A -- #
-    csv_path = r'Python\\CSV_Data\\'
+    csv_path = root + r'Python\\CSV_Data\\'
         
     basic = pd.read_csv(csv_path+f'{year}\\basic.csv')
     basic_opp = pd.read_csv(csv_path+f'{year}\\basic_opp.csv')
@@ -44,11 +44,13 @@ def create_differentials(year:str):
     #Output results as CSV
     basic_df = pd.DataFrame(basic_dif_matrix, columns=basic.columns)
     basic_df = basic_df.loc[:,~basic_df.columns.str.match("Unnamed")] #Remove empty columns
+    basic_df['School'] = basic_df.School.str.replace(u"\u00A0" , ' ')
     basic_df['School'] = basic_df.School.str.replace(' NCAA' , '')
     basic_df.to_csv(csv_path + f'{year}\\basic_differential.csv', index=False)
 
     adv_dif = pd.DataFrame(adv_dif_matrix, columns=adv.columns)
     adv_dif = adv_dif.loc[:,~adv_dif.columns.str.match("Unnamed")]
+    adv_dif['School'] = adv_dif.School.str.replace(u"\u00A0" , ' ')
     adv_dif['School'] = adv_dif.School.str.replace(' NCAA' , '')
 
     adv_dif.to_csv(csv_path + f'{year}\\adv_differential.csv', index=False)

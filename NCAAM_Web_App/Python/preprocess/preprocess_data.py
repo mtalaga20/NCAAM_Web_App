@@ -8,15 +8,15 @@ from preprocess import preprocess_coaches
 from preprocess import preprocess_differentials
 
 #years = ['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2021','2022','2023']
-def preprocess(years:list[int], tourney = False) -> None:
+def preprocess(years:list[int], root:str, tourney = False) -> None:
     for year in years:
         #Preprocess coach data
-        preprocess_coaches.preprocess_coaches(year)
+        preprocess_coaches.preprocess_coaches(year, root)
         #Create differentials between team and opposition data
-        create_differentials.create_differentials(year)
+        create_differentials.create_differentials(year, root)
         #Preprocess differentials
-        preprocess_differentials.preprocess_differentials(year)
+        preprocess_differentials.preprocess_differentials(year, root)
         
         if tourney:
             #Combine differentials for tourney games between teams playing
-            combine_differentials.combine_differentials(year)
+            combine_differentials.combine_differentials(year, root)

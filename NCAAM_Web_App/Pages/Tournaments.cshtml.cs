@@ -26,11 +26,11 @@ namespace NCAAM_Web_App.Pages
         public SelectList? Years { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public int? Year { get; set; }
+        public string? Year { get; set; }
 
         public async Task OnGetAsync()
         {
-            IQueryable<int> yearQuery = from m in _context.Tournament
+            IQueryable<string> yearQuery = from m in _context.Tournament
                                             orderby m.Year
                                             select m.Year;
 
