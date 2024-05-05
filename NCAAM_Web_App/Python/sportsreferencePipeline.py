@@ -75,15 +75,16 @@ if preprocess:
                 preprocess_data.preprocess([year], root, False)
             else:
                 preprocess_data.preprocess([year], root, tourney)
+    print("Completed Preprocessing")
 else:
-    print("Skipping preprocess")
+    print("Skipping Preprocessing")
 
 if train:
     if exclude_latest_year:
         run_model.run_model(years[:-1], root)
     else:
         run_model.run_model(years, root)
-    print("Completed Training.")
+    print("Completed Training")
 
 if rank_tms:
     for year in years:
@@ -91,6 +92,6 @@ if rank_tms:
         if rank_teams_latest_year_only and year != years[-1]:   
             continue
         rank_teams.rank_teams(int(year), root)
-    print("Completed team ranking.")
+    print("Completed team ranking")
 
-print("Completed")
+print("Completed Everything")

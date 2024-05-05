@@ -7,6 +7,7 @@ import math
 import pandas as pd
 import numpy as np
 import warnings
+from datetime import date
 from sqlalchemy import create_engine
 from sqlalchemy.dialects.mysql import VARCHAR
 from sqlalchemy import Table, Column, Integer, String
@@ -17,16 +18,18 @@ from sklearn.model_selection import train_test_split
 
 warnings.filterwarnings("ignore")
 
-def rank_teams(prediction_year:str) -> None:
+def rank_teams(prediction_year:str, root:str) -> None:
     #----------------------------------------------
     #prediction_year = 2024 #year or None
     #----------------------------------------------
 
     #cursor = sqlServerConnect.connect()
-    csv_path = r'Python\\CSV_Data\\'
+    today = date.today()
+    csv_path = root + r'Python\\CSV_Data\\'
     beginning_year = 2010
     years = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024]
     if prediction_year is not None: years.remove(prediction_year)
+    if beginning_year in years: years.remove(beginning_year)
     model_functions = [gradient_boost_regressor.gb_regressor
                     ] #Models all have the same parameters
 
@@ -130,13 +133,13 @@ def rank_teams(prediction_year:str) -> None:
     rows = []
     for i in range(len(teams)):
         rows.append([i+1, teams[i]["Team"], teams[i]["Wins"], teams[i]["Conference"], teams[i]["W"], teams[i]["L"], teams[i]["SRS"],
-                     teams[i]["AP"], teams[i]["OSRS"], teams[i]["DSRS"]])
+                     teams[i]["AP"], teams[i]["OSRS"], teams[i]["DSRS"], today])
 
-    df = pd.DataFrame(rows, columns=['Ranking', 'TeamName', 'Score', 'Conference', 'W', 'L', 'SRS', 'APRank', 'OSRS', 'DSRS'])
-    df.to_csv(f'Python/evaluation/{prediction_year}_rankings.csv', index=False)
+    df = pd.DataFrame(rows, columns=['Ranking', 'TeamName', 'Score', 'Conference', 'W', 'L', 'SRS', 'APRank', 'OSRS', 'DSRS', 'RankDate'])
+    df.to_csv(f'{root}Python/evaluation/{prediction_year}_rankings.csv', index=False)
 
     #Add to database
-    engine = create_engine('mssql+pyodbc://.\SQLEXPRESS/NCAAM_Stats?trusted_connection=yes&driver=SQL+Server', use_setinputsizes=False)
+    engine = create_engine('mssql+pyodbc://(LocalDb)\MSSQLLocalDB/NCAAM_Stats?&driver=ODBC+Driver+17+for+SQL+Server', use_setinputsizes=False)
     
     try:
         df.to_sql("Rank", engine, if_exists="replace")

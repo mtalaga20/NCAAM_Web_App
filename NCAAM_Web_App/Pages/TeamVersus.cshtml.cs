@@ -39,7 +39,7 @@ namespace NCAAM_Web_App.Pages
             {
                 Process process = new Process();
                 process.StartInfo.FileName = "C:\\Users\\michael\\AppData\\Local\\Programs\\Python\\Python310\\python.exe";
-                process.StartInfo.Arguments = $"NCAAM_Web_App\\Python\\modeling\\team_versus.py \"NCAAM_Web_App\\\\\" \"{TeamOne}\" \"{TeamTwo}\""; // Note the /c command (*)
+                process.StartInfo.Arguments = $"Python\\modeling\\team_versus.py \"{TeamOne}\" \"{TeamTwo}\""; // Note the /c command (*)
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.RedirectStandardOutput = true;
                 process.StartInfo.RedirectStandardError = true;

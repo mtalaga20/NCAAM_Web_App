@@ -17,7 +17,7 @@ ETSU,East Tennessee State
 LIU,Long Island University
 Penn,Pennsylvania
 UMBC,Maryland-Baltimore County
-UCF,Central Florida
+REVERSED UCF,Central Florida
 St. Peter's,Saint Peter's
 UMass,Massachusetts
 UNLV,Nevada-Las Vegas
@@ -45,3 +45,6 @@ C. Connecticut,Central Connecticut State
 Sam Houston State,Sam Houston
 Fairleigh Dickinson,FDU
 Grambling State,Grambling
+UNCW,UNC Wilmington
+McNeese,McNeese State
+Charleston,College of Charleston 

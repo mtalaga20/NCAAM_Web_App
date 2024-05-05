@@ -6,13 +6,15 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-def team_versus(team_one, team_two, year, model):
+def team_versus(team_one, team_two, year, model, root):
     if True:
     #try:
-        csv_path = r'CSV_Data\\'
+        csv_path = root + r'CSV_Data\\'
         basic_dif = pd.read_csv(csv_path + f'{year}\\basic_differential.csv')
         adv_dif = pd.read_csv(csv_path + f'{year}\\adv_differential.csv')
         coach = pd.read_csv(csv_path+f'{year}\\coach.csv')
+        ratings = pd.read_csv(csv_path+f'{year}\\ratings.csv')
+        ratings = ratings.fillna(0)
         column_size = len(basic_dif.columns)+len(adv_dif.columns)
 
         for i in range(2):
@@ -25,9 +27,11 @@ def team_versus(team_one, team_two, year, model):
             away_basic = basic_dif.loc[basic_dif['School'] == team_one].to_numpy().flatten()
             away_adv = adv_dif.loc[adv_dif['School'] == team_one].to_numpy().flatten()
             away_coach = coach.loc[coach['School'] == team_one].to_numpy().flatten()
+            away_ratings = ratings.loc[ratings['School'] == team_one].to_numpy().flatten()
             home_basic = basic_dif.loc[basic_dif['School'] == team_two].to_numpy().flatten()
             home_adv = adv_dif.loc[adv_dif['School'] == team_two].to_numpy().flatten()
             home_coach = coach.loc[coach['School'] == team_two].to_numpy().flatten()
+            home_ratings = ratings.loc[ratings['School'] == team_two].to_numpy().flatten()
 
             new_row = []
                 #new_row = [away_team, home_team]
@@ -48,6 +52,11 @@ def team_versus(team_one, team_two, year, model):
             new_row.append(home_coach[24]-away_coach[24])
             new_row.append(home_coach[25]-away_coach[25])
             new_row.append(0 if (math.isnan(home_coach[26]) or math.isnan(away_coach[26])) else int(home_coach[26])-int(away_coach[26]))
+
+            #Rating Stats
+            new_row.append(home_ratings[12]-away_ratings[12]) #OSRS
+            new_row.append(home_ratings[13]-away_ratings[13]) #DSRS
+            new_row.append(home_ratings[16]-away_ratings[16]) #DRtg
 
             new_row = [0 if math.isnan(i) else i for i in new_row] 
 

@@ -1,16 +1,16 @@
-Id,Year,Game,GameNum,Result
+ Id,Year,Game,GameNum,Result
 2024.Play-in,2024,Play-in,1,Game Play-in - Colorado beats Boise State by 1.4
-2024.Play-in,2024,Play-in,2,Game Play-in - Colorado State beats Virginia by 0.7
+2024.Pay-in,2024,Pay-in,2,Game Pay-in - Virginia beats Virginia by 0.1
 2024.E1,2024,E1,3,Game E1 - Connecticut beats Stetson by 10.9
 2024.E2,2024,E2,4,Game E2 - Florida Atlantic beats Northwestern by 5.2
-2024.E3,2024,E3,5,Game E3 - San Diego State beats UAB by 9.3
-2024.E4,2024,E4,6,Game E4 - Auburn beats Yale by 7.3
-2024.E5,2024,E5,7,Game E5 - Brigham Young beats Duquesne by 7.3
-2024.E6,2024,E6,8,Game E6 - Illinois beats Morehead State by 10.5
+2024.E3,2024,E3,5,Game E3 - San Diego State beats UAB by 8.4
+2024.E4,2024,E4,6,Game E4 - Auburn beats Yale by 7.7
+2024.E5,2024,E5,7,Game E5 - Brigham Young beats Duquesne by 7.9
+2024.E6,2024,E6,8,Game E6 - Illinois beats Morehead State by 10.4
 2024.E7,2024,E7,9,Game E7 - Washington State beats Drake by 4.6
 2024.E8,2024,E8,10,Game E8 - Iowa State beats South Dakota State by 13.5
 2024.W1,2024,W1,11,Game W1 - North Carolina beats Howard by 14.0
-2024.W2,2024,W2,12,Game W2 - Michigan State beats Mississippi State by 4.5
+2024.W2,2024,W2,12,Game W2 - Michigan State beats Mississippi State by 4.7
 2024.W3,2024,W3,13,Game W3 - Saint Mary's (CA) beats Grand Canyon by 9.0
 2024.W4,2024,W4,14,Game W4 - Alabama beats College of Charleston by 11.2
 2024.W5,2024,W5,15,Game W5 - New Mexico beats Clemson by 1.8
@@ -19,11 +19,11 @@ Id,Year,Game,GameNum,Result
 2024.W8,2024,W8,18,Game W8 - Arizona beats Long Beach State by 12.6
 2024.S1,2024,S1,19,Game S1 - Houston beats Longwood by 14.3
 2024.S2,2024,S2,20,Game S2 - Texas A&M beats Nebraska by 1.1
-2024.S3,2024,S3,21,Game S3 - Wisconsin beats James Madison by 9.5
+2024.S3,2024,S3,21,Game S3 - Wisconsin beats James Madison by 9.7
 2024.S4,2024,S4,22,Game S4 - Duke beats Vermont by 9.5
 2024.S5,2024,S5,23,Game S5 - Texas Tech beats NC State by 7.3
 2024.S6,2024,S6,24,Game S6 - Kentucky beats Oakland by 9.6
-2024.S7,2024,S7,25,Game S7 - Colorado beats Florida by 1.1
+2024.S7,2024,S7,25,Game S7 - Florida beats Colorado by 0.5
 2024.S8,2024,S8,26,Game S8 - Marquette beats Western Kentucky by 10.7
 2024.MW1,2024,MW1,27,Game MW1 - Purdue beats Grambling by 9.9
 2024.MW2,2024,MW2,28,Game MW2 - TCU beats Utah State by 2.1
@@ -31,29 +31,29 @@ Id,Year,Game,GameNum,Result
 2024.MW4,2024,MW4,30,Game MW4 - Kansas beats Samford by 3.6
 2024.MW5,2024,MW5,31,Game MW5 - Oregon beats South Carolina by 2.1
 2024.MW6,2024,MW6,32,Game MW6 - Creighton beats Akron by 7.3
-2024.MW7,2024,MW7,33,Game MW7 - Texas beats Colorado State by 7.1
+2024.MW7,2024,MW7,33,Game MW7 - Texas beats Virginia by 6.1
 2024.MW8,2024,MW8,34,Game MW8 - Tennessee beats Saint Peter's by 10.1
 2024.E9,2024,E9,35,Game E9 - Connecticut beats Florida Atlantic by 11.4
-2024.E10,2024,E10,36,Game E10 - Auburn beats San Diego State by 6.0
-2024.E11,2024,E11,37,Game E11 - Illinois beats Brigham Young by 0.2
+2024.E10,2024,E10,36,Game E10 - Auburn beats San Diego State by 5.5
+2024.E11,2024,E11,37,Game E11 - Brigham Young beats Illinois by 0.4
 2024.E12,2024,E12,38,Game E12 - Iowa State beats Washington State by 6.3
 2024.W9,2024,W9,39,Game W9 - North Carolina beats Michigan State by 1.9
 2024.W10,2024,W10,40,Game W10 - Alabama beats Saint Mary's (CA) by 8.0
 2024.W11,2024,W11,41,Game W11 - Baylor beats New Mexico by 9.7
 2024.W12,2024,W12,42,Game W12 - Arizona beats Dayton by 9.1
 2024.S9,2024,S9,43,Game S9 - Houston beats Texas A&M by 10.7
-2024.S10,2024,S10,44,Game S10 - Duke beats Wisconsin by 0.6
+2024.S10,2024,S10,44,Game S10 - Wisconsin beats Duke by 0.2
 2024.S11,2024,S11,45,Game S11 - Kentucky beats Texas Tech by 2.6
-2024.S12,2024,S12,46,Game S12 - Marquette beats Colorado by 8.5
+2024.S12,2024,S12,46,Game S12 - Marquette beats Florida by 6.9
 2024.MW9,2024,MW9,47,Game MW9 - Purdue beats TCU by 14.2
 2024.MW10,2024,MW10,48,Game MW10 - Gonzaga beats Kansas by 2.9
 2024.MW11,2024,MW11,49,Game MW11 - Creighton beats Oregon by 4.1
 2024.MW12,2024,MW12,50,Game MW12 - Tennessee beats Texas by 9.7
-2024.E13,2024,E13,51,Game E13 - Connecticut beats Auburn by 2.9
-2024.E14,2024,E14,52,Game E14 - Iowa State beats Illinois by 16.8
+2024.E13,2024,E13,51,Game E13 - Connecticut beats Auburn by 3.3
+2024.E14,2024,E14,52,Game E14 - Iowa State beats Brigham Young by 2.4
 2024.W13,2024,W13,53,Game W13 - Alabama beats North Carolina by 2.1
 2024.W14,2024,W14,54,Game W14 - Arizona beats Baylor by 3.8
-2024.S13,2024,S13,55,Game S13 - Houston beats Duke by 11.3
+2024.S13,2024,S13,55,Game S13 - Houston beats Wisconsin by 11.3
 2024.S14,2024,S14,56,Game S14 - Marquette beats Kentucky by 2.1
 2024.MW13,2024,MW13,57,Game MW13 - Purdue beats Gonzaga by 5.3
 2024.MW14,2024,MW14,58,Game MW14 - Tennessee beats Creighton by 2.5
